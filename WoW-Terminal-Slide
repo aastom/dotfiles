@@ -1,0 +1,40 @@
+[1;36m================================================================================[0m
+[1;36m                          WoW: MY DOTFILES[0m
+[1;36m================================================================================[0m
+
+[1;33m✨ Core idea[0m
+
+  [1;32m*[0m One repo for my terminal and developer setup
+  [1;32m*[0m One command: [1mstow -R --no-folding <tool-name>[0m
+  [1;32m*[0m Same workflow on [1mmacOS[0m, [1mLinux[0m, and [1mWindows via WSL[0m
+
+[1;33m🚀 Why it matters[0m
+
+  [1;35m*[0m New or rebuilt machine: back to work quickly
+  [1;35m*[0m No relearning shortcuts, prompts, or Git flow
+  [1;35m*[0m Version-controlled setup: easy to restore and improve
+
+[1;33m⚡ Daily impact[0m
+
+  [1;34m*[0m [1mZsh + Alacritty + tmux[0m: same terminal everywhere
+  [1;34m*[0m [1mfzf + ghq + fd + bat + exa[0m: faster search and navigation
+  [1;34m*[0m [1manyenv + sdkman + direnv[0m: fewer runtime and env issues
+  [1;34m*[0m [1mGit + Meld + diff-so-fancy + Espanso[0m: quicker reviews and less repetition
+
+[1;33m🌐 Why WSL matters[0m
+
+  [1;31m*[0m In Windows-only environments, I keep the same Linux-first workflow
+  [1;31m*[0m No separate setup and no drop in productivity
+
+[1;33m🤖 Next[0m
+
+  [1;36m*[0m Add [1mGitHub Copilot CLI[0m, [1mGemini CLI[0m, and [1mClaude Code[0m
+  [1;36m*[0m Keep AI tooling consistent on every device
+
+[1;33m✅ Bottom line[0m
+
+  [1;32m*[0m [1mLess setup[0m
+  [1;32m*[0m [1mLess friction[0m
+  [1;32m*[0m [1mSame environment everywhere[0m
+
+[1;36m================================================================================[0m

@@ -10,11 +10,22 @@
 [push]
     default = simple
 [diff]
-    tool = meld
+  tool = meld
 [difftool]
-    prompt = false
+  prompt = false
+[difftool "meld"]
+  trustExitCode = true
+  cmd = /Applications/Meld.app/Contents/MacOS/Meld "$LOCAL" "$REMOTE"
+[merge]
+  tool = meld
+[mergetool]
+  prompt = false
+[mergetool "meld"]
+  trustExitCode = true
+  cmd = /Applications/Meld.app/Contents/MacOS/Meld --auto-merge "$LOCAL" "$BASE" "$REMOTE" --output="$MERGED"
 [commit]
     template = ~/.config/git/template
+	gpgsign = true
 [color]
     ui = true
 [color "diff-highlight"]
@@ -37,3 +48,14 @@
     root = ~/Code
 [include]
     path = ~/.config/git/local
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = astom ahashie
+	email = astom.ahashie@lloydsbanking.com
+	signingkey = /Users/5612595/.ssh/id_ed25519.pub
+[gpg]
+	format = ssh

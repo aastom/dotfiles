@@ -43,7 +43,7 @@ zinit light tj/git-extras
 #   atpull'%atclone' @github/hub
 
 zinit from'gh-r' lucid for \
-  bpick'*amd64.tar.gz' sbin'**/gh' \
+  bpick'*macOS_arm64.zip' sbin'**/gh' \
   atclone'cp -vf **/*.1 $ZPFX/share/man/man1' atpull'%atclone' @cli/cli
 
 zinit as'null' wait lucid light-mode for \
@@ -126,10 +126,10 @@ zinit lucid for \
 
 # Snippets
 zinit ice wait lucid id-as'fzf-keybindings'
-zinit snippet 'https://github.com/junegunn/fzf/blob/master/shell/key-bindings.zsh'
+zinit snippet 'https://raw.githubusercontent.com/junegunn/fzf/master/shell/key-bindings.zsh'
 
 zinit ice wait lucid id-as'fzf-completion'
-zinit snippet 'https://github.com/junegunn/fzf/blob/master/shell/completion.zsh'
+zinit snippet 'https://raw.githubusercontent.com/junegunn/fzf/master/shell/completion.zsh'
 
 # Completion
 zinit ice wait'1' lucid as'completion' \
@@ -146,6 +146,11 @@ zinit snippet 'https://github.com/HeLiBloks/exiftool-zsh-completion/blob/master/
 
 zinit wait'1' as'completion' id-as'gh-completion' lucid for \
   atclone'gh completion -s zsh > _gh' atpull'%atclone' zdharma-continuum/null
+
+# GitHub Copilot CLI completion
+zinit wait'1' as'completion' id-as'gh-copilot-completion' lucid for \
+  atclone'gh copilot -- completion --shell zsh > _gh-copilot 2>/dev/null || true' \
+  atpull'%atclone' zdharma-continuum/null
 
 # Theme
 if [[ "$ZSH_THEME" == "p10k" ]]; then

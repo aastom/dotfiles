@@ -57,5 +57,15 @@ elif (( $+commands[htop] )); then
   alias top='htop'
 fi
 
+# GitHub Copilot CLI
+# 'cop' — interactive Copilot session
+alias cop='gh copilot'
+# 'copp' — non-interactive prompt mode (--allow-all-tools for scripting)
+alias copp='gh copilot -- -p'
+# 'copi' — interactive mode with an opening prompt
+alias copi='gh copilot -- -i'
+# 'cop-yolo' — allow-all permissions (equivalent to --yolo)
+alias cop-yolo='gh copilot -- --allow-all'
+
 # Convenience when pasting shell snippets.
 alias '$='

@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    // Add custom MCP servers here.
+    // The built-in GitHub MCP server is enabled by default.
+    // Reference: https://docs.github.com/copilot/how-tos/copilot-cli
+    //
+    // Example — a local filesystem MCP server:
+    // "filesystem": {
+    //   "command": "npx",
+    //   "args": ["-y", "@modelcontextprotocol/server-filesystem", "~/Code"]
+    // }
+  }
+}

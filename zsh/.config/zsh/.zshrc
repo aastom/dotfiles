@@ -21,3 +21,4 @@ foreach module (
 
 # Local plugins, completions, functions, etc.
 [[ -e $LOCALRC ]] && . $LOCALRC
+export PATH="/opt/homebrew/bin:$PATH"

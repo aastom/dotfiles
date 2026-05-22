@@ -17,3 +17,9 @@ export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
 # Local configuration file.
 export LOCALRC="$ZDOTDIR/.local"
+export PATH=$PATH:/opt/homebrew/bin:~/.local/bin:"/Applications/Visual Studio Code.app/Contents/Resources/app/bin":"/Applications/Meld.app/Contents/MacOS"
+meld() {
+	"/Applications/Meld.app/Contents/MacOS/Meld" "$@"
+}
+alias kn4j="kubectl -n ns-kcl-ap-edhpro-soi-neo4j"
+alias kl="kubectl -n ns-kcl-ap-edhpro-soi-linkurious"

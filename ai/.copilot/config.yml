@@ -1,0 +1,51 @@
+# GitHub Copilot CLI configuration
+# Config dir: ~/.copilot/ (or $XDG_CONFIG_HOME/copilot — note: Copilot CLI uses
+# $XDG_CONFIG_HOME as the root for "~/.copilot" when set, but defaults to ~/.copilot)
+#
+# Full list of settings: copilot help config
+# Docs: https://docs.github.com/copilot/how-tos/copilot-cli
+
+# ── Model ────────────────────────────────────────────────────────────────────
+# Default AI model. Can be changed interactively with /model.
+# Available: claude-sonnet-4.6, gpt-5.2, gemini-3-pro-preview, …
+model: claude-sonnet-4.6
+
+# ── Appearance ───────────────────────────────────────────────────────────────
+# Theme: "auto" | "dark" | "light"
+theme: auto
+
+# Show animated banner: "once" | "always" | "never"
+banner: once
+
+# Render markdown in terminal output.
+render_markdown: true
+
+# Use alternate terminal screen buffer (similar to vim/less).
+alt_screen: false
+
+# ── Behaviour ────────────────────────────────────────────────────────────────
+# Automatically download updated CLI versions.
+auto_update: true
+
+# Whether the agent adds Co-authored-by trailers to commits.
+include_coauthor: true
+
+# Update terminal tab title with the agent's current intent.
+update_terminal_title: true
+
+# Stream responses as they arrive.
+stream: true
+
+# Enable experimental features.
+experimental: false
+
+# ── Logging ──────────────────────────────────────────────────────────────────
+# "default" or "all" (verbose debug).
+log_level: default
+
+# ── IDE integration ──────────────────────────────────────────────────────────
+ide:
+  # Auto-connect to VS Code / JetBrains when starting.
+  auto_connect: true
+  # Open file-edit diffs in the connected IDE for approval.
+  open_diff_on_edit: true

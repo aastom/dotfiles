@@ -38,6 +38,13 @@ export CARGO_HOME="$XDG_DATA_HOME/cargo"
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 export -U PATH="$CARGO_HOME/bin${PATH:+:$PATH}"
 
+# GitHub Copilot CLI
+# Auth token — set via gh auth login; gh token is picked up via GH_TOKEN.
+# COPILOT_GITHUB_TOKEN, GH_TOKEN, or GITHUB_TOKEN (in order of precedence).
+# Use GH_TOKEN to share a single credential with gh CLI.
+# Model can be overridden per-session with /model or --model.
+export COPILOT_MODEL="${COPILOT_MODEL:-claude-sonnet-4.6}"
+
 # fzf
 typeset -AU __FZF
 if (( $+commands[fd] )); then
