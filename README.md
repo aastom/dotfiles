@@ -18,6 +18,7 @@ Every top-level directory is a **stow package** — symlinking its subtree into 
   - [fontconfig](#fontconfig)
   - [git](#git)
   - [mpv](#mpv)
+  - [nvim](#nvim)
   - [tmux](#tmux)
   - [zsh](#zsh)
 - [Zsh Plugins & CLI Tools](#zsh-plugins--cli-tools)
@@ -33,6 +34,10 @@ Every top-level directory is a **stow package** — symlinking its subtree into 
 | [Homebrew](https://brew.sh) | Package manager | `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"` |
 | [Zinit](https://github.com/zdharma-continuum/zinit) | Zsh plugin manager | auto-installed by `zsh/modules/zinit.zsh` on first shell load |
 | [gh CLI](https://cli.github.com) | GitHub CLI — also powers Copilot CLI | managed by Zinit (`cli/cli`) |
+| [Neovim](https://neovim.io) 0.10+ | Text editor | `brew install neovim` |
+| [ripgrep](https://github.com/BurntSushi/ripgrep) | Neovim fuzzy search | `brew install ripgrep` |
+| [lazygit](https://github.com/jesseduffield/lazygit) | Git TUI for Neovim | `brew install lazygit` |
+| A [Nerd Font](https://www.nerdfonts.com) v3+ | Icons in Neovim / terminal | download & set in terminal |
 
 ---
 
@@ -221,7 +226,41 @@ Docs: <https://mpv.io/manual/master>
 
 ---
 
-### `tmux`
+### `nvim`
+
+| Symlinked path | Source |
+|----------------|--------|
+| `~/.config/nvim/` | `nvim/.config/nvim/` |
+
+Full Neovim IDE configuration built on [LazyVim](https://lazyvim.org).  
+See [`nvim/.config/nvim/README.md`](nvim/.config/nvim/README.md) for comprehensive documentation.
+
+**Quick summary:**
+
+| Feature | Detail |
+|---------|--------|
+| Plugin manager | [lazy.nvim](https://github.com/folke/lazy.nvim) |
+| LSP installer | [Mason](https://github.com/williamboman/mason.nvim) |
+| Completion | [blink.cmp](https://github.com/saghen/blink.cmp) |
+| Fuzzy finder | [fzf-lua](https://github.com/ibhagwan/fzf-lua) |
+| File explorer | [neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim) |
+| AI completions | [copilot.lua](https://github.com/zbirenbaum/copilot.lua) ghost-text |
+| AI chat | [CopilotChat.nvim](https://github.com/CopilotC-Nvim/CopilotChat.nvim) — **Claude Opus 4.6** |
+
+**Languages with full LSP support:**
+
+`Python` · `Go` · `Terraform/HCL` · `C` · `C++` · `C#` · `Java` · `TypeScript/JS` · `Rust` · `Lua` · `YAML` · `JSON` · `TOML` · `Markdown` · `Docker` · `SQL` · `Nix` · `Svelte` · `Vue`
+
+**First-time setup:**
+
+```sh
+stow --no-folding nvim
+nvim                  # lazy.nvim bootstraps plugins on first launch
+# Inside neovim:
+# :Copilot auth       ← authenticate GitHub Copilot
+```
+
+---
 
 | Symlinked file | Source |
 |----------------|--------|
